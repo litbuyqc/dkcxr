@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#432c62">
+  <meta name="description" content="Explore the Joyagoo spreadsheet shopping workflow: compare clothing and sneaker finds, organize product links, check sizing, and browse categories at CAFANS.">
+  <title>Joyagoo Spreadsheet Guide | Sneakers, Clothing &amp; Accessories | CAFANS</title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Joyagoo Spreadsheet — A Clearer Way to Compare Finds">
+  <meta property="og:description" content="An independent guide to product lists, sizing checks, quality-control photos, and organized fashion discovery.">
+  <meta property="og:site_name" content="CAFANS">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Joyagoo Spreadsheet Shopping Guide">
+  <meta name="twitter:description" content="Compare product information, explore fashion categories, and build a more useful shopping shortlist.">
+  <!-- Filename: index.html. Add a self-referencing canonical URL after choosing this page's public deployment address. -->
+  <!-- Main keyword: joyagoo spreadsheet.
+       Secondary keywords: joyagoo finds, joyagoo spreadsheet guide,
+       joyagoo clothing spreadsheet, joyagoo sneaker spreadsheet,
+       joyagoo shopping list.
+       Related phrases appear in the visible discovery index below. -->
+  <style>
+    :root{--paper:#f7f3ec;--ink:#292332;--muted:#6c6473;--purple:#432c62;--lavender:#e5ddee;--lime:#e3efae;--line:#d9d1df;--white:#fffdf9;--radius:22px}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+    a{color:inherit}
+    img{display:block;width:100%;height:100%;object-fit:cover}
+    button,a{-webkit-tap-highlight-color:transparent}
+    a:focus-visible,summary:focus-visible{outline:3px solid #775199;outline-offset:5px}
+    .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .masthead{border-bottom:1px solid var(--line)}
+    .masthead-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 0}
+    .logo{font-size:clamp(20px,3vw,29px);font-weight:900;text-decoration:none;letter-spacing:-1px;color:var(--purple)}
+    .edition{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--muted)}
+    .top-link{font-size:13px;font-weight:700;text-decoration:none;border-bottom:1px solid;padding-bottom:3px}
+    .category-section{padding:25px 0 30px}
+    .section-caption{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+    .eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:800;color:var(--purple)}
+    .category-title{font-size:14px;margin:0;font-weight:700}
+    .categories{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
+    .category{min-height:58px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;text-decoration:none;display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--white);font-size:13px;font-weight:700}
+    .category:hover{background:var(--lavender);border-color:var(--purple)}
+    .category span{overflow-wrap:anywhere}
+    .category b{font-size:17px;color:var(--purple)}
+    .hero{display:grid;grid-template-columns:1.12fr .88fr;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--lavender)}
+    .hero-copy{padding:clamp(26px,5vw,60px);position:relative}
+    .issue{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;font-weight:800}
+    .issue:before{content:"";height:8px;width:8px;border-radius:50%;background:var(--purple)}
+    h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(45px,6.7vw,82px);letter-spacing:-3px;line-height:1.01;margin:25px 0}
+    h1 em{font-style:italic;color:var(--purple)}
+    .lead{max-width:490px;font-size:16px;color:#51465e}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:20px;min-height:48px;padding:12px 22px;border-radius:8px;background:var(--purple);color:white;font-size:13px;font-weight:700;text-decoration:none}
+    .button:hover{background:#60417f}
+    .hero-copy .button{margin-top:14px}
+    .micro{font-size:11px;color:var(--muted);margin-top:20px;max-width:430px}
+    .hero-art{position:relative;min-height:490px;background:#d53443}
+    .hero-art img{position:absolute;inset:0}
+    .photo-tag{position:absolute;left:22px;right:22px;bottom:22px;padding:16px 18px;border-radius:12px;background:rgba(255,253,249,.94)}
+    .photo-tag small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.8px;text-transform:uppercase}
+    .photo-tag strong{display:block;font-family:Georgia,serif;font-size:22px;font-weight:400;margin-top:3px}
+    .answer-strip{display:grid;grid-template-columns:190px 1fr;gap:25px;padding:27px 0;border-bottom:1px solid var(--line)}
+    .answer-strip h2{font-size:13px;margin:3px 0;color:var(--purple)}
+    .answer-strip p{margin:0;font-size:15px}
+    .section{padding:58px 0}
+    .section h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(29px,4vw,44px);line-height:1.15;letter-spacing:-1px;margin:10px 0 18px}
+    .section-intro{max-width:700px;color:var(--muted);margin:0 0 26px}
+    .editorial-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .note{padding:29px;border:1px solid var(--line);border-radius:var(--radius);background:var(--white)}
+    .note h3{font-size:18px;line-height:1.3;margin:12px 0}
+    .note p{font-size:14px;color:var(--muted);margin:0}
+    .number{font-family:Georgia,serif;font-size:30px;color:var(--purple)}
+    .brand-band{display:grid;grid-template-columns:1fr 2fr;gap:25px;padding:26px;background:var(--purple);color:white;border-radius:var(--radius);margin-top:24px}
+    .brand-band h3{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;margin:0 0 10px;color:var(--lime)}
+    .brand-names{font-family:Georgia,serif;font-size:24px;line-height:1.6}
+    .brand-band p{font-size:13px;margin:0;color:#e5dceb}
+    .worksheet{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .table-scroll{overflow:auto;border:1px solid var(--line);border-radius:14px}
+    table{width:100%;border-collapse:collapse;min-width:650px;font-size:13px}
+    caption{text-align:left;padding:16px 18px;font-weight:700;background:var(--lavender)}
+    th,td{text-align:left;vertical-align:top;padding:16px 18px;border-bottom:1px solid var(--line)}
+    th{color:var(--purple);font-size:11px;text-transform:uppercase;letter-spacing:1px}
+    tbody tr:last-child td{border-bottom:0}
+    .table-note{font-size:12px;color:var(--muted);margin:13px 0 0}
+    .workflow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:26px}
+    .step{border-top:3px solid var(--purple);padding:20px 0}
+    .step span{font-size:11px;font-weight:800;letter-spacing:1.7px;color:var(--purple)}
+    .step h3{font-family:Georgia,serif;font-weight:400;font-size:25px;line-height:1.2;margin:12px 0}
+    .step p{font-size:14px;color:var(--muted);margin:0}
+    .split{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}
+    .checklist{padding-left:20px;font-size:14px;color:var(--muted)}
+    .checklist li{margin-bottom:12px}
+    .faq details{border-bottom:1px solid var(--line);padding:18px 0}
+    .faq summary{cursor:pointer;font-size:15px;font-weight:700;padding-right:15px}
+    .faq details p{font-size:14px;color:var(--muted);margin:12px 0 0}
+    .discovery{border-top:1px solid var(--line)}
+    .term-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .term-group h3{font-size:13px;color:var(--purple);margin:0 0 13px}
+    .terms{display:flex;flex-wrap:wrap;gap:8px}
+    .terms span{font-size:11px;border:1px solid var(--line);padding:6px 9px;border-radius:6px;background:var(--white)}
+    .closing{padding:32px;background:var(--lime);border-radius:var(--radius);display:flex;align-items:center;justify-content:space-between;gap:25px;margin:0 0 50px}
+    .closing h2{font-family:Georgia,serif;font-size:30px;font-weight:400;line-height:1.2;margin:0 0 8px}
+    .closing p{font-size:14px;margin:0;color:#526035}
+    footer{border-top:1px solid var(--line);padding:26px 0 35px}
+    .footer-row{display:flex;justify-content:space-between;gap:25px;align-items:start}
+    .footer-row p{font-size:11px;color:var(--muted);margin:0;max-width:730px}
+    .footer-row a{font-size:12px;font-weight:700;white-space:nowrap}
+    @media(min-width:900px){.below-fold{content-visibility:auto;contain-intrinsic-size:auto 650px}}
+    @media(max-width:800px){
+      .categories{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .hero{grid-template-columns:1fr}
+      .hero-art{min-height:340px}
+      .hero-art img{object-position:center 54%}
+      .answer-strip{grid-template-columns:1fr;gap:8px}
+      .split{grid-template-columns:1fr;gap:25px}
+      .brand-band{grid-template-columns:1fr;gap:15px}
+      .term-groups{grid-template-columns:1fr}
+      .edition{display:none}
+    }
+    @media(max-width:520px){
+      .wrap{width:calc(100% - 28px)}
+      .masthead-inner{padding:19px 0}
+      .top-link{font-size:11px}
+      .categories{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .category{font-size:12px;padding:11px}
+      .section-caption .eyebrow{display:none}
+      h1{letter-spacing:-2px}
+      .hero-art{min-height:285px}
+      .editorial-grid,.workflow{grid-template-columns:1fr}
+      .section{padding:40px 0}
+      .note{padding:24px}
+      .closing{padding:25px;align-items:stretch;flex-direction:column}
+      .closing .button{align-self:flex-start}
+      .footer-row{flex-direction:column;gap:15px}
+    }
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "name":"Joyagoo Spreadsheet Guide",
+        "description":"An independent guide to organizing sneaker, clothing, and accessory product information before shopping.",
+        "inLanguage":"en",
+        "about":{"@type":"Thing","name":"Joyagoo spreadsheet"},
+        "isAccessibleForFree":true
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"What is a Joyagoo spreadsheet?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"In shopping searches, a Joyagoo spreadsheet usually means a curated list of product links and comparison notes. Its usefulness depends on the accuracy and freshness of each entry; a listing alone does not verify a seller or product."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Is this an official Joyagoo website?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"No. This is an independent informational page that links to CAFANS. It does not represent Joyagoo or the brands mentioned."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Does a spreadsheet guarantee product quality or authenticity?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"No. A spreadsheet organizes information. Check the seller, item description, supporting photos, return conditions, and any available evidence of authenticity separately."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"How should I compare clothing sizes?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Compare the item's measurements with a garment you already own. Check the size chart for the exact product, including the units, rather than relying only on a letter size."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"What should I include in a shopping budget?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Record the item price and currency, then account for any applicable domestic delivery, service fees, international shipping, payment conversion, and import charges. Obtain current estimates before paying."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="logo" href="https://www.cafans.com" aria-label="Visit www.cafans.com">www.cafans.com</a>
+      <span class="edition">The independent shopping notebook</span>
+      <a class="top-link" href="https://www.cafans.com">Explore the catalog ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="category-section wrap" aria-labelledby="category-heading">
+      <div class="section-caption">
+        <h2 class="category-title" id="category-heading">Start with your category</h2>
+        <span class="eyebrow">Less searching. More clarity.</span>
+      </div>
+      <nav class="categories" aria-label="Shop categories on CAFANS">
+        <a class="category" href="https://cafans.com/category-911-Shoes.html"><span>Shoes</span><b aria-hidden="true">↗</b></a>
+        <a class="category" href="https://cafans.com/category-912-Hoodies%2FSweaters.html"><span>Hoodies/Sweaters</span><b aria-hidden="true">↗</b></a>
+        <a class="category" href="https://cafans.com/category-913-T-Shirts.html"><span>T-Shirts</span><b aria-hidden="true">↗</b></a>
+        <a class="category" href="https://cafans.com/category-914-Jackets.html"><span>Jackets</span><b aria-hidden="true">↗</b></a>
+        <a class="category" href="https://cafans.com/category-915-Pants%2FShorts.html"><span>Pants/Shorts</span><b aria-hidden="true">↗</b></a>
+        <a class="category" href="https://cafans.com/category-916-Headwear.html"><span>Headwear</span><b aria-hidden="true">↗</b></a>
+        <a class="category" href="https://cafans.com/category-917-Sets.html"><span>Sets</span><b aria-hidden="true">↗</b></a>
+        <a class="category" href="https://cafans.com/category-918-underwear%2Funderpants.html"><span>Underwear/underpants</span><b aria-hidden="true">↗</b></a>
+        <a class="category" href="https://cafans.com/category-919-Jersey.html"><span>Jersey</span><b aria-hidden="true">↗</b></a>
+        <a class="category" href="https://cafans.com/category-920-Accessories.html"><span>Accessories</span><b aria-hidden="true">↗</b></a>
+      </nav>
+    </section>
+
+    <section class="hero wrap" aria-labelledby="main-heading">
+      <div class="hero-copy">
+        <div class="issue">The comparison edition</div>
+        <h1 id="main-heading">Joyagoo<br><em>spreadsheet.</em><br>A better shortlist.</h1>
+        <p class="lead">Turn scattered sneaker and clothing links into an organized shopping list. Compare the details that matter, check the gaps, and discover your next category at CAFANS.</p>
+        <a class="button" href="https://www.cafans.com">Discover fashion finds <span aria-hidden="true">↗</span></a>
+        <p class="micro">Independent shopping guidance. Product availability, prices, seller terms, and platform services should be checked at their original source.</p>
+      </div>
+      <div class="hero-art">
+        <img
+          src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
+          alt="Red Nike athletic sneaker photographed against a red background"
+          width="1000"
+          height="1000"
+          fetchpriority="high"
+          decoding="async">
+        <div class="photo-tag">
+          <small>A closer look</small>
+          <strong>Style catches the eye. Details make the decision.</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="answer-strip wrap" aria-labelledby="quick-answer">
+      <h2 id="quick-answer">What is a Joyagoo spreadsheet?</h2>
+      <p>In shopping searches, a <strong>Joyagoo spreadsheet</strong> usually means a curated list of product links and comparison notes. Its usefulness depends on the accuracy and freshness of each entry; a listing alone does not verify a seller or product.</p>
+    </section>
+
+    <section class="section wrap below-fold" aria-labelledby="guide-heading">
+      <span class="eyebrow">01 / Read the list</span>
+      <h2 id="guide-heading">A Joyagoo spreadsheet guide<br>built around better questions.</h2>
+      <p class="section-intro">The most useful list helps you understand what you are comparing. Start with the item itself, then evaluate the information behind it.</p>
+
+      <div class="editorial-grid">
+        <article class="note">
+          <span class="number">01.</span>
+          <h3>Joyagoo sneaker spreadsheet: look beyond the photo</h3>
+          <p>Record the exact model, color, size system, and product link. Compare close-up images, available measurements, and seller descriptions. A polished photograph does not establish fit, materials, or authenticity.</p>
+        </article>
+        <article class="note">
+          <span class="number">02.</span>
+          <h3>Joyagoo clothing spreadsheet: make fit measurable</h3>
+          <p>For hoodies, tees, jackets, and trousers, save the garment measurements and fabric notes. Compare chest width, length, waist, and inseam with clothing you already wear comfortably.</p>
+        </article>
+      </div>
+
+      <aside class="brand-band" aria-label="Brand search context">
+        <div>
+          <h3>Brand search context</h3>
+          <div class="brand-names">Nike · Louis Vuitton<br>Gucci · Hermès</div>
+        </div>
+        <p>These names may appear in sneaker, apparel, headwear, and jewelry searches. Brand references and the editorial sneaker photograph do not establish current CAFANS inventory, authorization, or product authenticity. Verify every individual listing and its supporting information before purchasing.</p>
+      </aside>
+    </section>
+
+    <section class="worksheet below-fold" aria-labelledby="worksheet-heading">
+      <div class="section wrap">
+        <span class="eyebrow">02 / Keep useful notes</span>
+        <h2 id="worksheet-heading">Give every find a clear record.</h2>
+        <p class="section-intro">Use this field checklist when building your own Joyagoo shopping list. It works for a simple spreadsheet or a personal notes document.</p>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Shopping spreadsheet field checklist">
+          <table>
+            <caption>Suggested fields for a product comparison sheet</caption>
+            <thead>
+              <tr><th scope="col">Field</th><th scope="col">What to record</th><th scope="col">Why it helps</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Item &amp; source</strong></td><td>Product name, original link, seller, date checked</td><td>Makes the entry traceable and easier to recheck.</td></tr>
+              <tr><td><strong>Category &amp; variant</strong></td><td>Shoes, clothing, headwear, or accessories; selected color and size</td><td>Separates similar-looking products and variants.</td></tr>
+              <tr><td><strong>Fit &amp; materials</strong></td><td>Measurement chart, units, fabric description, missing details</td><td>Replaces assumptions with comparable information.</td></tr>
+              <tr><td><strong>Price &amp; currency</strong></td><td>Displayed item price, currency, known fees, estimate date</td><td>Keeps item cost separate from the total purchase budget.</td></tr>
+              <tr><td><strong>Photos &amp; checks</strong></td><td>Source photos, available QC images, questions still unanswered</td><td>Shows what you have actually reviewed.</td></tr>
+              <tr><td><strong>Terms &amp; status</strong></td><td>Return conditions, stock status, shortlist decision</td><td>Helps you revisit the decision before paying.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">This is a planning checklist, not a live product feed or a downloadable spreadsheet. No prices, stock levels, or shipping estimates are asserted here.</p>
+      </div>
+    </section>
+
+    <section class="section wrap below-fold" aria-labelledby="finds-heading">
+      <span class="eyebrow">03 / Move from discovery to decision</span>
+      <h2 id="finds-heading">Joyagoo finds, with a little more structure.</h2>
+      <p class="section-intro">A repeatable comparison process makes a growing list easier to manage.</p>
+      <div class="workflow">
+        <article class="step">
+          <span>STEP 01 / DISCOVER</span>
+          <h3>Choose one category.</h3>
+          <p>Start with sneakers, hoodies, jerseys, or accessories. Browse the category links above and collect only items that match the style and use you have in mind.</p>
+        </article>
+        <article class="step">
+          <span>STEP 02 / COMPARE</span>
+          <h3>Resolve the unknowns.</h3>
+          <p>Check the exact variant, measurements, photo evidence, seller terms, and likely total cost. Mark unanswered questions rather than filling them with guesses.</p>
+        </article>
+        <article class="step">
+          <span>STEP 03 / RECHECK</span>
+          <h3>Confirm before paying.</h3>
+          <p>Reopen the original listing. Confirm availability, price, selected options, delivery information, and the applicable purchasing process before committing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap split below-fold" aria-labelledby="faq-heading">
+      <div>
+        <span class="eyebrow">04 / Clear answers</span>
+        <h2 id="faq-heading">Before you add<br>another item.</h2>
+        <p class="section-intro">A short checklist for international fashion discovery.</p>
+        <ul class="checklist">
+          <li>Compare garment measurements using the same units.</li>
+          <li>Distinguish seller images from photos of the actual item.</li>
+          <li>Confirm whether delivery and service charges are included.</li>
+          <li>Read the return conditions for the exact purchase.</li>
+          <li>Keep the original product link and the date you checked it.</li>
+        </ul>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>Is this an official Joyagoo website?</summary>
+          <p>No. This is an independent informational page that links to CAFANS. It does not represent Joyagoo or the brands mentioned.</p>
+        </details>
+        <details>
+          <summary>Does a spreadsheet guarantee product quality or authenticity?</summary>
+          <p>No. A spreadsheet organizes information. Check the seller, item description, supporting photos, return conditions, and any available evidence of authenticity separately.</p>
+        </details>
+        <details>
+          <summary>How should I compare clothing sizes?</summary>
+          <p>Compare the item's measurements with a garment you already own. Check the size chart for the exact product, including the units, rather than relying only on a letter size.</p>
+        </details>
+        <details>
+          <summary>What should I include in a shopping budget?</summary>
+          <p>Record the item price and currency, then account for any applicable domestic delivery, service fees, international shipping, payment conversion, and import charges. Obtain current estimates before paying.</p>
+        </details>
+        <details>
+          <summary>Where do the category links take me?</summary>
+          <p>Each category link opens the corresponding CAFANS category. Other navigation and shopping buttons open the CAFANS homepage. This page does not submit orders or collect payment.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section wrap discovery below-fold" aria-labelledby="discovery-heading">
+      <span class="eyebrow">05 / Discovery index</span>
+      <h2 id="discovery-heading">Explore by item, fit, or buying question.</h2>
+      <p class="section-intro">Use these topics to narrow your product research and decide what information belongs in your comparison notes.</p>
+      <div class="term-groups">
+        <div class="term-group">
+          <h3>Product discovery</h3>
+          <div class="terms">
+            <span>Joyagoo product links</span>
+            <span>sneaker finds</span>
+            <span>hoodie finds</span>
+            <span>streetwear spreadsheet</span>
+            <span>T-shirt product list</span>
+            <span>jacket comparison</span>
+            <span>pants and shorts finds</span>
+            <span>jersey shopping list</span>
+            <span>headwear finds</span>
+            <span>fashion accessories list</span>
+          </div>
+        </div>
+        <div class="term-group">
+          <h3>Fit &amp; product checks</h3>
+          <div class="terms">
+            <span>sneaker size chart</span>
+            <span>clothing measurements</span>
+            <span>hoodie size guide</span>
+            <span>T-shirt fit comparison</span>
+            <span>fabric composition</span>
+            <span>product photo review</span>
+            <span>QC photo checklist</span>
+            <span>colorway comparison</span>
+            <span>seller information check</span>
+            <span>product authenticity checks</span>
+          </div>
+        </div>
+        <div class="term-group">
+          <h3>Planning &amp; organization</h3>
+          <div class="terms">
+            <span>shopping agent guide</span>
+            <span>product link organizer</span>
+            <span>international shopping checklist</span>
+            <span>item price comparison</span>
+            <span>shipping cost estimate</span>
+            <span>purchase budget planner</span>
+            <span>return policy checklist</span>
+            <span>shopping shortlist</span>
+            <span>spreadsheet shopping workflow</span>
+            <span>product availability check</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing wrap" aria-labelledby="closing-heading">
+      <div>
+        <h2 id="closing-heading">Find your category. Keep your perspective.</h2>
+        <p>Explore CAFANS, compare the details, and build a shortlist that makes sense for you.</p>
+      </div>
+      <a class="button" href="https://www.cafans.com">Browse CAFANS <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <p>Independent editorial guide to Joyagoo spreadsheet searches. Joyagoo, Nike, Louis Vuitton, Gucci, and Hermès are trademarks of their respective owners. No affiliation or endorsement is implied. The photograph is editorial imagery, not an offer for the pictured product.</p>
+      <a href="https://www.cafans.com">www.cafans.com ↗</a>
+    </div>
+  </footer>
+</body>
+</html>
